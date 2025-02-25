@@ -1,9 +1,9 @@
+console.log("iniciando script.js");
 
-console.log("iniciando script.js")
+const todo = document.getElementById("todoInput");
 
-const todo = document.getElementById("todoInput")
+const addTodo = document.getElementById("addTodoButton");
 
-const addTodo = document.getElementById("addTodoButton")
-
-console.log(todo)
-console.log(addTodo)
+function addTodoList() {
+  console.log("clicou no botão");
+}
