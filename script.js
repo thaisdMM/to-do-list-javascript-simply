@@ -5,9 +5,11 @@ const listTodo = document.getElementById("todoList"); // Pega a <ul>
 function addTodoTask() {
   const todoValue = todo.value; // Pega o valor do input 
    console.log(todoValue);
-
-  const newTodoItemm = document.createElement("li");
-  newTodoItemm.textContent = todoValue
-  listTodo.appendChild(newTodoItemm)
-
-}
+   
+   const newTodoItem = document.createElement("li"); // Cria um <li>
+   newTodoItem.textContent = todoValue; // Define o texto do <li> como o que foi digitado
+ 
+   listTodo.appendChild(newTodoItem); // Adiciona o <li> na <ul>
+ 
+   todo.value = ""; // Limpa o input depois de adicionar a tarefa
+ }
