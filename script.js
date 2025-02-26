@@ -5,5 +5,6 @@ const todo = document.getElementById("todoInput");
 const addTodo = document.getElementById("addTodoButton");
 
 function addTodoList() {
-  console.log("clicou no botão");
+   const todoValue = todo.value;
+   console.log(todoValue)
 }
