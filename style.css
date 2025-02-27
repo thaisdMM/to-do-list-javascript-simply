@@ -4,6 +4,32 @@ body {
    text-align: center;
 }
 
+#todoInput {
+   
+   width: 250px; /* Aumenta a largura */
+  padding: 10px; /* Adiciona espaço interno */
+  border: 1px solid #ccc; /* Borda suave */
+  border-radius: 5px; /* Borda arredondada */
+  font-size: 16px; /* Texto maior */
+  outline: none; /* Remove a borda azul ao clicar */
+}
+#todoInput::placeholder {
+  color: #888; /* Cor do placeholder mais suave */
+}
+#addTodoButton {
+   padding: 10px 5px;
+   background-color: #8cb8e8;
+   border: 1px solid grey;
+   border-radius: 5px;
+   font-size: 13px;
+   cursor: pointer;
+   margin-left: 5px;
+}
+
+#addTodoButton:hover {
+   background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
 #todoList {
    list-style: none;
    padding: 0;
@@ -24,7 +50,7 @@ body {
 
 .delete_btn {
    background-color: rgb(241, 142, 142);
-   border: 2px solid black;
+   border: 1px solid gray;
    border-radius: 3px;
    padding: 3px 10px;
    cursor: pointer;
