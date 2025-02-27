@@ -1,30 +1,40 @@
-let inputTask = document.getElementById("inputTodo");
+// let inputTask = document.getElementById("inputTodo");
 
-let addButton = document.getElementById("addTodo");
+// let addButton = document.getElementById("addTodo");
 
-let listTask = document.getElementById("todoList");
+// let listTask = document.getElementById("todoList");
 
 function addTodoTask() {
-  let valueInputTask = inputTask.value;
-  if (valueInputTask.trim() === "") {
-    console.log("Campo vazio, preencha com alguma tarefa");
-    return;
-  }
+  let createInput = document.createElement("input");
+  createInput.type = "text";
+  createInput.id = "inputTodo"
+  createInput.placeholder = "Type your to-do task";
 
-  let newTaskItem = document.createElement("li");
-  newTaskItem.textContent = valueInputTask;
-
-  let deleteTask = document.createElement("button");
-  deleteTask.textContent = "Delete";
-  deleteTask.type = "button";
-
-  newTaskItem.appendChild(deleteTask);
-
-  listTask.appendChild(newTaskItem);
-
-  inputTask.value = "";
-
-  deleteTask.addEventListener("click", function () {
-    newTaskItem.remove();
-  });
+  document.body.appendChild(createInput);
 }
+
+addTodoTask()
+
+//   let valueInputTask = inputTask.value;
+//   if (valueInputTask.trim() === "") {
+//     console.log("Campo vazio, preencha com alguma tarefa");
+//     return;
+//   }
+
+//   let newTaskItem = document.createElement("li");
+//   newTaskItem.textContent = valueInputTask;
+
+//   let deleteTask = document.createElement("button");
+//   deleteTask.textContent = "Delete";
+//   deleteTask.type = "button";
+
+//   newTaskItem.appendChild(deleteTask);
+
+//   listTask.appendChild(newTaskItem);
+
+//   inputTask.value = "";
+
+//   deleteTask.addEventListener("click", function () {
+//     newTaskItem.remove();
+//   });
+// }
