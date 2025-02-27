@@ -1,9 +1,3 @@
-// let inputTask = document.getElementById("inputTodo");
-
-// let addButton = document.getElementById("addTodo");
-
-// let listTask = document.getElementById("todoList");
-
 function addTodoTask() {
   const createInput = document.createElement("input");
   createInput.type = "text";
@@ -14,21 +8,33 @@ function addTodoTask() {
 }
 addTodoTask();
 
+function createUl() {
+  const listTask = document.createElement("ul");
+  listTask.id = "listTask";
+
+  document.body.appendChild(listTask);
+}
+createUl();
+
 function addButton() {
   const createAddButton = document.createElement("button");
   createAddButton.textContent = "add button";
   createAddButton.type = "button";
   createAddButton.id = "addButton";
 
-  createAddButton.addEventListener("click", function() {
-   console.log("clicou")
-  })
+  createAddButton.addEventListener("click", function () {
+    const inputTodo = document.getElementById("inputTodo");
+    const listTask = document.getElementById("listTask");
+
+    const newTaskItem = document.createElement("li");
+    newTaskItem.textContent = inputTodo.value;
+
+    listTask.appendChild(newTaskItem)
+  });
 
   document.body.appendChild(createAddButton);
 }
 addButton();
-
-
 
 //   let valueInputTask = inputTask.value;
 //   if (valueInputTask.trim() === "") {
