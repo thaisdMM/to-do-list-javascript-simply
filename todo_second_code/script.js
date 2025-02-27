@@ -5,15 +5,23 @@
 // let listTask = document.getElementById("todoList");
 
 function addTodoTask() {
-  let createInput = document.createElement("input");
+  const createInput = document.createElement("input");
   createInput.type = "text";
-  createInput.id = "inputTodo"
+  createInput.id = "inputTodo";
   createInput.placeholder = "Type your to-do task";
 
   document.body.appendChild(createInput);
 }
+addTodoTask();
 
-addTodoTask()
+function addButton() {
+  const createAddButton = document.createElement("button");
+  createAddButton.textContent = "add button";
+  createAddButton.type = "butoon";
+
+  document.body.appendChild(createAddButton);
+}
+addButton();
 
 //   let valueInputTask = inputTask.value;
 //   if (valueInputTask.trim() === "") {
