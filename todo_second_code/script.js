@@ -17,11 +17,18 @@ addTodoTask();
 function addButton() {
   const createAddButton = document.createElement("button");
   createAddButton.textContent = "add button";
-  createAddButton.type = "butoon";
+  createAddButton.type = "button";
+  createAddButton.id = "addButton";
+
+  createAddButton.addEventListener("click", function() {
+   console.log("clicou")
+  })
 
   document.body.appendChild(createAddButton);
 }
 addButton();
+
+
 
 //   let valueInputTask = inputTask.value;
 //   if (valueInputTask.trim() === "") {
