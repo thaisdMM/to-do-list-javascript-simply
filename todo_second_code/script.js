@@ -1,5 +1,3 @@
-console.log("script funcionando");
-
 let inputTask = document.getElementById("inputTodo");
 
 let addButton = document.getElementById("addTodo");
@@ -8,7 +6,10 @@ let listTask = document.getElementById("todoList");
 
 function addTodoTask() {
   let valueInputTask = inputTask.value;
-  console.log(valueInputTask);
+  if (valueInputTask.trim() === "") {
+    console.log("Campo vazio, preencha com alguma tarefa");
+    return;
+  }
 
   let newTaskItem = document.createElement("li");
   newTaskItem.textContent = valueInputTask;
@@ -20,6 +21,8 @@ function addTodoTask() {
   newTaskItem.appendChild(deleteTask);
 
   listTask.appendChild(newTaskItem);
+
+  inputTask.value = "";
 
   deleteTask.addEventListener("click", function () {
     newTaskItem.remove();
