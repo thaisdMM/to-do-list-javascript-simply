@@ -17,7 +17,13 @@ function addTodoTask() {
    const newTodoItem = document.createElement("li"); // Cria um <li>
    newTodoItem.textContent = todoValue; // Define o texto do <li> como o que foi digitado
  
-   listTodo.appendChild(newTodoItem); // Adiciona o <li> na <ul>
+   listTodo.appendChild(newTodoItem); // Adiciona o <li>(child) na <ul>(father)
  
    todo.value = ""; // Limpa o input depois de adicionar a tarefa
+
+   let deleteButton = document.createElement("button");
+   deleteButton.textContent = "Delete"
+   deleteButton.type = "button"
+
+   listTodo.appendChild(deleteButton)
  }
