@@ -15,11 +15,13 @@ function addTodoTask() {
     return;
   }
   const newTodoItem = document.createElement("li"); // Cria um <li>
-  newTodoItem.textContent = todoValue; // Define o texto do <li> como o que foi digitado
+  newTodoItem.textContent = todoValue; // Define o texto do <li> como o que foi digitado 
+  newTodoItem.classList.add("todo-item"); // Classe para estilizar a tarefa
 
   let deleteButton = document.createElement("button");
   deleteButton.textContent = "Delete";
   deleteButton.type = "button";
+  deleteButton.classList.add("delete_btn")  // Adicionando uma classe ao botão
 
   // Adiciona o botão dentro do <li>, ao lado do texto
   newTodoItem.appendChild(deleteButton);
