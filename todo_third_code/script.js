@@ -30,7 +30,8 @@ function createAddButton() {
     const ulList = document.getElementById("ulList");
 
     if (inputTodo.value.trim() === "") {
-      return alert("Tarefa invalida, digite a nova tarefa");
+      showMessage("Tarefa invalida, tente novamente");
+      return;
     }
 
     const newTaskItem = document.createElement("li");
@@ -56,4 +57,14 @@ function createDeleteButton(taskItem) {
   deleteButton.addEventListener("click", () => taskItem.remove());
 
   taskItem.appendChild(deleteButton);
+}
+
+function showMessage(text) {
+  const messageBox = document.getElementById("messageBox");
+  messageBox.textContent = text;
+  
+  // Aguarda 2 segundos (2000 milissegundos) e apaga a mensagem
+  setTimeout(() => {
+    messageBox.textContent = "";
+  }, 2000);
 }
