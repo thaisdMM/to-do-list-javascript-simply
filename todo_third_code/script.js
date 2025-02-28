@@ -29,11 +29,17 @@ function createAddButton() {
     const inputTodo = document.getElementById("inputTodo");
     const ulList = document.getElementById("ulList");
 
+    if(inputTodo.value.trim() === ""){
+      return alert("Tarefa invalida, digite a nova tarefa")
+    }
+
     const newTaskItem = document.createElement("li");
     newTaskItem.textContent = inputTodo.value;
     newTaskItem.id = "newTaskItem";
 
     ulList.appendChild(newTaskItem);
+
+    inputTodo.value = ""
   });
 
   htmlContent.appendChild(addButton);
