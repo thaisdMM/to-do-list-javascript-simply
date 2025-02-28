@@ -23,7 +23,7 @@ function createAddButton() {
   const addButton = document.createElement("button");
   addButton.textContent = "add to-do";
   addButton.type = "button";
-  addButton.id = "addButton";
+  addButton.classList.add("addButton");
 
   addButton.addEventListener("click", () => {
     const inputTodo = document.getElementById("inputTodo");
@@ -35,8 +35,7 @@ function createAddButton() {
 
     const newTaskItem = document.createElement("li");
     newTaskItem.textContent = inputTodo.value;
-    newTaskItem.id = "newTaskItem";
-
+    newTaskItem.classList.add("newTaskItem");
     createDeleteButton(newTaskItem);
 
     ulList.appendChild(newTaskItem);
@@ -48,13 +47,13 @@ function createAddButton() {
 }
 createAddButton();
 
-function createDeleteButton(TaskItem) {
+function createDeleteButton(taskItem) {
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "delete";
   deleteButton.type = "button";
-  deleteButton.id = "deleteButton";
+  deleteButton.classList.add("deleteButton");
 
-  deleteButton.addEventListener("click", () => TaskItem.remove());
+  deleteButton.addEventListener("click", () => taskItem.remove());
 
-  TaskItem.appendChild(deleteButton);
+  taskItem.appendChild(deleteButton);
 }
