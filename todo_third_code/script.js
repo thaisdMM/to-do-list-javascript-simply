@@ -16,6 +16,10 @@ function createAddButton() {
    addButton.type = "button"
    addButton.id = "addButton"
 
+   addButton.addEventListener("click", function() {
+      console.log("cliquei no botão")
+   })
+
    htmlContent.appendChild(addButton)
 }
 createAddButton()
