@@ -43,6 +43,8 @@ function createAddButton() {
       deleteButton.type = "button"
       deleteButton.id = "deleteButton"
 
+      deleteButton.addEventListener("click", () => newTaskItem.remove())
+
       newTaskItem.appendChild(deleteButton)
     }
     createDeleteButton()
