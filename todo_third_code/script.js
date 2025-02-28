@@ -17,6 +17,8 @@ function createUlList() {
   htmlContent.appendChild(ulList);
 }
 
+createUlList();
+
 function createAddButton() {
   const addButton = document.createElement("button");
   addButton.textContent = "add to-do";
@@ -24,7 +26,14 @@ function createAddButton() {
   addButton.id = "addButton";
 
   addButton.addEventListener("click", () => {
-    console.log("clicou");
+    const inputTodo = document.getElementById("inputTodo");
+    const ulList = document.getElementById("ulList");
+
+    const newTaskItem = document.createElement("li");
+    newTaskItem.textContent = inputTodo.value;
+    newTaskItem.id = "newTaskItem";
+
+    ulList.appendChild(newTaskItem);
   });
 
   htmlContent.appendChild(addButton);
