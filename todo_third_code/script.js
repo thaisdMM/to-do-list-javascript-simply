@@ -37,6 +37,16 @@ function createAddButton() {
     newTaskItem.textContent = inputTodo.value;
     newTaskItem.id = "newTaskItem";
 
+    function createDeleteButton(){
+      const deleteButton = document.createElement("button")
+      deleteButton.textContent = "delete"
+      deleteButton.type = "button"
+      deleteButton.id = "deleteButton"
+
+      newTaskItem.appendChild(deleteButton)
+    }
+    createDeleteButton()
+
     ulList.appendChild(newTaskItem);
 
     inputTodo.value = ""
