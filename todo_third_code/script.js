@@ -29,31 +29,32 @@ function createAddButton() {
     const inputTodo = document.getElementById("inputTodo");
     const ulList = document.getElementById("ulList");
 
-    if(inputTodo.value.trim() === ""){
-      return alert("Tarefa invalida, digite a nova tarefa")
+    if (inputTodo.value.trim() === "") {
+      return alert("Tarefa invalida, digite a nova tarefa");
     }
 
     const newTaskItem = document.createElement("li");
     newTaskItem.textContent = inputTodo.value;
     newTaskItem.id = "newTaskItem";
 
-    function createDeleteButton(){
-      const deleteButton = document.createElement("button")
-      deleteButton.textContent = "delete"
-      deleteButton.type = "button"
-      deleteButton.id = "deleteButton"
-
-      deleteButton.addEventListener("click", () => newTaskItem.remove())
-
-      newTaskItem.appendChild(deleteButton)
-    }
-    createDeleteButton()
+    createDeleteButton(newTaskItem);
 
     ulList.appendChild(newTaskItem);
 
-    inputTodo.value = ""
+    inputTodo.value = "";
   });
 
   htmlContent.appendChild(addButton);
 }
 createAddButton();
+
+function createDeleteButton(TaskItem) {
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "delete";
+  deleteButton.type = "button";
+  deleteButton.id = "deleteButton";
+
+  deleteButton.addEventListener("click", () => TaskItem.remove());
+
+  TaskItem.appendChild(deleteButton);
+}
